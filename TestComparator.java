@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Collections;
 
-class ReverseNumerical implements Comparator<Integer> {
+class ReverseNumericalComparator implements Comparator<Integer> {
     public int compare(Integer o1, Integer o2) {
         return o2 - o1;
     }
@@ -14,11 +14,11 @@ class ReverseNumerical implements Comparator<Integer> {
 
 public class TestComparator {
     @Test
-    public void reverseComp() {
+    public void testReverseNumericalComparator() {
         final List<Integer> numbers = Arrays.asList(4,7,1,6,3,5,4);
         final List<Integer> expected = Arrays.asList(7,6,5,4,4,3,1);
 
-        Collections.sort(numbers, new ReverseNumerical());
+        Collections.sort(numbers, new ReverseNumericalComparator());
         assertEquals(expected, numbers);
     }
 }
