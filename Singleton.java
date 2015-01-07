@@ -1,5 +1,5 @@
 class Singleton {
-    private static Singleton instance;
+    private volatile static Singleton instance;
 
     public static Singleton getInstance() {
         if(instance == null) {
